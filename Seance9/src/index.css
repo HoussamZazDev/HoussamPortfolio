@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+body {
+    font-family: Inter, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    font-style: oblique;
+}
+
+
+input[type=text]{
+ background-color: aqua;   
+ color: azure;
+ border: 2px solid black;
+}
