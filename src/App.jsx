@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
+import Home from './AppComponents/Home';
 import TodoApp from './apps/TodoApp';
 import ProfileApplication from './apps/ProfileApplication';
 import CountriesApi from './apps/CountriesApi';
@@ -19,6 +20,7 @@ export default function App(){
         <Route path='/countriesapi' element={<CountriesApi/>}/>
         <Route path='/calculator' element={<Calculator/>}/>
     </Routes>
+    <Home />
     
     
     </div>

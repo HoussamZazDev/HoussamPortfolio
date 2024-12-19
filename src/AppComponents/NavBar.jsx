@@ -6,12 +6,14 @@ export default function NavBar(){
     return(
         <div className="NavContainer">
             <nav className="NavNav">
-                <Link to='/'>Home</Link>
-                <Link to='/todoapp'>TodoApp</Link>
-                <Link to='/profileapplication'>profileapplication</Link>
-                <Link to='/countriesapi'>countriesapi</Link>
-                <Link to='/calculator'>calculator</Link>
-
+                <ul className="NavUl">
+                    
+                    <li className="Navli"><Link to='/'>Home</Link></li>
+                    <li className="Navli"><Link to='/todoapp'>TodoApp</Link></li>
+                    <li className="Navli"> <Link to='/profileapplication'>profileapplication</Link></li>
+                    <li className="Navli"><Link to='/countriesapi'>countriesapi</Link></li>
+                    <li className="Navli"><Link to='/calculator'>calculator</Link></li>
+                </ul>
             </nav>
         </div>
     )
