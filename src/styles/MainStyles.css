@@ -1,0 +1,60 @@
+
+:root {
+    --light-bg: #e6f3ff;
+    --light-text: #1a365d;
+    --light-nav: #bde0fe;
+    --dark-bg: #1a365d;
+    --dark-text: #e6f3ff;
+    --dark-nav: #2c5282;
+  }
+  
+  .app {
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  }
+  
+  .app.light {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+  
+  .app.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  .navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: var(--light-nav);
+  }
+  
+  .app.dark .navbar {
+    background-color: var(--dark-nav);
+  }
+  
+  .theme-toggle, .language-select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .theme-toggle:hover, .language-select:hover {
+    opacity: 0.8;
+  }

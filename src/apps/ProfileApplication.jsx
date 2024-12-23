@@ -1,6 +1,7 @@
 
 import React, { useState, useRef } from "react";
 import "../styles/ProfileApplication.css"; 
+import NavBar from "../AppComponents/NavBar";
 
 function ProfileApplication() {
 
@@ -32,21 +33,22 @@ function ProfileApplication() {
     });
   };
 
-  return (
-    <div className="app">
-      <h1>Atelier ReactJS : Composants Dynamiques</h1>
+  return (<>
+      <NavBar applogoname={"Profile App"} />
+    <div className="ProfileApplication__app" style={{marginTop : '70px'}}>
+      <h1 className="ProfileApplication__h1">Atelier ReactJS : Composants Dynamiques</h1>
 
 
-      <div className="section">
+      <div className="ProfileApplication__section">
         <h2>1. Rendu Conditionnel</h2>
         <p>{message || "Faites un choix pour voir le message"}</p>
       </div>
 
 
-      <div className="section">
+      <div className="ProfileApplication__section">
         <h2>2. Radio Buttons</h2>
         <label>
-          <input
+          <input className="ProfileApplication__input"
             type="radio"
             name="options"
             value="Option A"
@@ -55,7 +57,7 @@ function ProfileApplication() {
           Option A
         </label>
         <label>
-          <input
+          <input className="ProfileApplication__input"
             type="radio"
             name="options"
             value="Option B"
@@ -64,7 +66,7 @@ function ProfileApplication() {
           Option B
         </label>
         <label>
-          <input
+          <input className="ProfileApplication__input"
             type="radio"
             name="options"
             value="Option C"
@@ -75,7 +77,7 @@ function ProfileApplication() {
       </div>
 
 
-      <div className="section">
+      <div className="ProfileApplication__section">
         <h2>3. Select Dynamique</h2>
         <select>
           {options.map((option, index) => (
@@ -85,25 +87,25 @@ function ProfileApplication() {
           ))}
         </select>
         <div className="add-option">
-          <input
+          <input className="ProfileApplication__input"
             type="text"
             placeholder="Nouvelle option"
             value={newOption}
             onChange={(e) => setNewOption(e.target.value)}
           />
-          <button onClick={addOption}>Ajouter</button>
+          <button onClick={addOption} className="ProfileApplication__button">Ajouter</button>
         </div>
       </div>
 
 
-      <div className="section">
+      <div className="ProfileApplication__section">
         <h2>4. Checkboxes avec useRef</h2>
-        <button onClick={() => toggleAllCheckboxes(true)}>Tout Sélectionner</button>
-        <button onClick={() => toggleAllCheckboxes(false)}>Tout Désélectionner</button>
+        <button className="ProfileApplication__button" onClick={() => toggleAllCheckboxes(true)}>Tout Sélectionner</button>
+        <button className="ProfileApplication__button" onClick={() => toggleAllCheckboxes(false)}>Tout Désélectionner</button>
         <div className="checkboxes">
           {["Option 1", "Option 2", "Option 3", "Option 4"].map((item, index) => (
             <label key={index}>
-              <input
+              <input className="ProfileApplication__input"
                 type="checkbox"
                 ref={(el) => (checkboxesRef.current[index] = el)}
               />
@@ -116,6 +118,7 @@ function ProfileApplication() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

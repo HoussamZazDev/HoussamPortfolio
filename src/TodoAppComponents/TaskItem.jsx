@@ -33,8 +33,8 @@ function TaskItem({ task, onDelete, onUpdate }) {
               <option value="in-progress">In Progress</option>
               <option value="completed">Completed</option>
             </select>
-            <button onClick={() => setIsEditing(true)}>Edit</button>
-            <button onClick={() => onDelete(task.id)}>Delete</button>
+            <button onClick={() => setIsEditing(true)} className='add-task-button buttonTodoApp'>Edit</button>
+            <button onClick={() => onDelete(task.id)} className='add-task-button buttonTodoApp'>Delete</button>
           </div>
         </>
       )}

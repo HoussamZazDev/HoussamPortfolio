@@ -1,29 +1,91 @@
-div.NavContainer {
+:root {
+    --NavBar-primary-blue: #e6f3ff;
+    --NavBar-secondary-blue: #bee3f8;
+    --NavBar-background-blue: #1a365d;
+    --NavBar-accent-blue: #4299e1;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'Arial', sans-serif;
+
+  }
+  
+  .NavBar-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: var(--NavBar-background-blue);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
     width: 100%;
-    background-color: rgb(0, 151, 151);
-    height: 70px;
-}
-
-ul.NavUl {
-    list-style-type: none;
-    width: fit-content;
-    height: fit-content;
+    z-index: 10;
+  }
+  
+  .NavBar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--NavBar-primary-blue);
+  }
+  
+  .NavBar-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-
-li.Navli {
-}
-
-a {
-    color: rgb(255, 255, 255);
-    padding: 24px;
+    gap: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .NavBar-link {
     text-decoration: none;
-}
+    font-size: 1rem;
+    color: var(--NavBar-secondary-blue);
+    transition: color 0.3s ease;
+  }
+  
+  .NavBar-link:hover {
+    color: var(--NavBar-accent-blue);
+  }
+  
+  .NavBar-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 15;
+  }
+  
+  .NavBar-hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: var(--NavBar-primary-blue);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .NavBar-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: var(--NavBar-background-blue);
+      width: 200px;
+      text-align: center;
+      padding: 1rem;
+      transform: translateX(100%);
+    }
+  
+    .NavBar-links-active {
+      transform: translateX(0);
+    }
+  
+    .NavBar-hamburger {
+      display: flex;
+    }
+  }
+  

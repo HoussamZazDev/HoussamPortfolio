@@ -1,12 +1,16 @@
 import CountryInformation from '../CountriesApiComponents/CountryInformation';
+import NavBar from '../AppComponents/NavBar';
+
 
 function CountriesApi() {
-  return (
-    <div className='CountryInformationBody'>
+  return (<>
+  <NavBar applogoname={"Countries Api"} />
+    <div className='CountryInformationBody'  style={{marginTop : '70px'}}>
     <div className="AppCountryInformation">
       <CountryInformation />
     </div>
     </div>
+    </>
   );
 }
 

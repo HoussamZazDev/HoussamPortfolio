@@ -1,0 +1,217 @@
+/* portfolio-styles.css */
+:root {
+    --portfolio-light-primary-blue: #1a365d;
+    --portfolio-light-secondary-blue: #2c5282;
+    --portfolio-light-background-blue: #e6f3ff;
+    --portfolio-light-accent-blue: #63b3ed;
+    --portfolio-dark-primary-blue: #e6f3ff;
+    --portfolio-dark-secondary-blue: #bee3f8;
+    --portfolio-dark-background-blue: #1a365d;
+    --portfolio-dark-accent-blue: #4299e1;
+  }
+  
+  .portfolio__container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Section */
+  .portfolio__hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .portfolio__hero-content {
+    width: 100%;
+  }
+  
+  .portfolio__hero-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .portfolio__hero-name {
+    color: var(--portfolio-light-accent-blue);
+  }
+  
+  .app.dark .portfolio__hero-name {
+    color: var(--portfolio-dark-accent-blue);
+  }
+  
+  .portfolio__hero-role {
+    font-size: 1.5rem;
+    color: var(--portfolio-light-secondary-blue);
+    margin-bottom: 2rem;
+  }
+  
+  .app.dark .portfolio__hero-role {
+    color: var(--portfolio-dark-secondary-blue);
+  }
+  
+  .portfolio__social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .portfolio__social-icon {
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .portfolio__social-icon:hover {
+    color: var(--portfolio-light-accent-blue);
+  }
+  
+  .app.dark .portfolio__social-icon:hover {
+    color: var(--portfolio-dark-secondary-blue);
+  }
+  
+  /* Section Common Styles */
+  .portfolio__section {
+    margin: 6rem 0;
+  }
+  
+  .portfolio__section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+  
+  /* Skills Section */
+  .portfolio__skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .portfolio__skill-item {
+    background-color: var(--portfolio-light-accent-blue);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .app.dark .portfolio__skill-item {
+    background-color: var(--portfolio-dark-accent-blue);
+  }
+  
+  .portfolio__skill-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Projects Section */
+  .portfolio__projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .portfolio__project-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio__project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio__project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .portfolio__project-info {
+    padding: 1.5rem;
+  }
+
+  .app.light .portfolio__project-info {
+    background-color: var(--portfolio-dark-secondary-blue);
+  }
+
+  .portfolio__project-title {
+    margin-bottom: 0.5rem;
+  }
+  
+  .portfolio__project-description {
+    color: inherit;
+    margin-bottom: 1rem;
+  }
+  
+  .portfolio__project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--portfolio-light-accent-blue);
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .app.dark .portfolio__project-link {
+    background-color: var(--portfolio-dark-accent-blue);
+  }
+  
+  .portfolio__project-link:hover {
+    opacity: 0.9;
+  }
+  
+  /* Contact Section */
+  .portfolio__contact-section {
+    text-align: center;
+  }
+  
+  .portfolio__contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .portfolio__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .portfolio__contact-link:hover {
+    color: var(--portfolio-light-accent-blue);
+  }
+  
+  .app.dark .portfolio__contact-link:hover {
+    color: var(--portfolio-dark-accent-blue);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .portfolio__hero-heading {
+      font-size: 2rem;
+    }
+    
+    .portfolio__hero-role {
+      font-size: 1.25rem;
+    }
+    
+    .portfolio__section {
+      margin: 4rem 0;
+    }
+    
+    .portfolio__projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

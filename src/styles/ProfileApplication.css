@@ -1,17 +1,23 @@
-.app {
+.ProfileApplication__app {
+  
     font-family: Arial, sans-serif;
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
   }
   
-  .section {
+  .ProfileApplication__section {
     margin-bottom: 20px;
   }
   
-  h1 {
+  .ProfileApplication__h1 {
+    margin-top: 40px;
     color: #333;
   }
   
-  button {
+  .ProfileApplication__button {
     margin: 5px;
     padding: 8px 12px;
     background-color: #007bff;
@@ -21,7 +27,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .ProfileApplication__button:hover {
     background-color: #0056b3;
   }
   
@@ -29,7 +35,7 @@
     margin-top: 10px;
   }
   
-  input[type="text"] {
+  .ProfileApplication__input[type="text"] {
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ccc;

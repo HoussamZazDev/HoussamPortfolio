@@ -19,6 +19,7 @@
   .bodyTodoApp {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.5;
+    
   }
   .logoimage{
     height: 50px;
@@ -30,7 +31,6 @@
   }
   .appTodoApp {
     min-height: 100vh;
-    padding: 20px;
     transition: all 0.3s ease;
   }
   
@@ -301,6 +301,8 @@
   }
   
   /* Custom Scrollbar */
+
+/*   
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -312,6 +314,6 @@
   ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
-  }
+  } */
   
   

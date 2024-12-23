@@ -1,10 +1,11 @@
-// App.jsx
+
 import React, { useState, useEffect } from 'react';
 import '../styles/TodoAppStyle.css';
 import TaskList from '../TodoAppComponents/TaskList';
 import AddTask from '../TodoAppComponents/AddTask';
 import Header from '../TodoAppComponents/TodoHeader';
 import SearchBar from '../TodoAppComponents/SearchBar';
+import NavBar from '../AppComponents/NavBar';
 
 function TodoApp() {
   const [darkMode, setDarkMode] = useState(false);
@@ -37,7 +38,10 @@ function TodoApp() {
   };
 
   return (
-    <div className="bodyTodoApp">
+  <>
+  <NavBar applogoname={"TaskoPhobia"}/>
+    <div className="bodyTodoApp" style={{marginTop : "70px"}}>
+      
       <div className="appTodoApp">
     <div className={`app ${darkMode ? 'dark' : 'light'}`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -58,6 +62,7 @@ function TodoApp() {
     </div>
     </div>
     </div>
+    </>
   );
 }
 
